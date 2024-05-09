@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DZ</string>
+    <string name="variance">variance</string>
+    <string name="mean">mean</string>
+</resources>
