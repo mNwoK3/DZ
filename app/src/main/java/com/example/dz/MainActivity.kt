@@ -2,12 +2,15 @@ package com.example.dz
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             out.text = DoubleToTextLocale.convert(a)
         }
     }
+
 
 }
 

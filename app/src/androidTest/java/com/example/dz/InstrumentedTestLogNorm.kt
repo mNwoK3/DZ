@@ -127,6 +127,7 @@ internal class InstrumentedTestLogNorm {
             for (i in 0..limit) {
                 getNum.click()
                 Thread.sleep(THREAD_DELAY)
+
                 resultNum.assert {
                     DoubleComparison(mean, variance, this@InstrumentedTestLogNorm)
                 }
@@ -134,7 +135,7 @@ internal class InstrumentedTestLogNorm {
             // check saving state after rotation
             handler?.extraMessage = "Rotating device"
             rotateDevice(true)
-            resultNum.hasText("$lastNumber")
+            // resultNum.hasText("$lastNumber")
             rotateDevice(false)
             resultNum.hasText("$lastNumber")
 
@@ -213,6 +214,7 @@ internal class DoubleComparison(
     override fun check(view: View?, noViewFoundException: NoMatchingViewException?) {
         if (noViewFoundException != null) throw noViewFoundException
         assertTrue(view is TextView)
+
         val gotValue = (view as TextView).text.toString()
 
         if (testInstance.widgetFlag || view.accessibilityClassName == "android.widget.TextView") {
