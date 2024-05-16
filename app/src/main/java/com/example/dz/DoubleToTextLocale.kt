@@ -2,8 +2,13 @@ package com.example.dz
 
 class DoubleToTextLocale {
     companion object {
-        fun convert(num: Double, locale: String = "RU"): String {
-            return num.toString()
+        public fun convert(num: Double, locale: String = "EN"): String {
+            return if (locale != "RU") {
+                num.toString()
+            } else {
+                num.toString().replace(".", ",")
+            }
+
         }
     }
 }
