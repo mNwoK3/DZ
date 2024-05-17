@@ -8,7 +8,7 @@ on:
 
 jobs:
   validation:
-    runs-on: macos-latest
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v3
       - uses: gradle/wrapper-validation-action@v1
@@ -33,7 +33,7 @@ jobs:
       # Allow tests to continue on other devices if they fail on one device.
       fail-fast: false
       matrix:
-        os: [macos-latest]
+        os: [macos-11]
         arch: [ x86_64 ]
         target: [ google_apis ]
         channel: [ stable ]
@@ -63,11 +63,11 @@ jobs:
             api-level: 30
             target: google_apis
             channel: canary
-          - os: macos-latest
+          - os: macos-11
             api-level: 31
             target: google_apis
             arch: x86_64
-          - os: macos-latest
+          - os: macos-11
             arch: x86_64
             api-level: 34
             target: google_apis
