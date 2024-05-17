@@ -12,7 +12,7 @@ import org.junit.Assert.*
 class UnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        assertEquals(6,2 + 4)
     }
     @Test
     fun doubleToTextLocale_isCorrect() {
