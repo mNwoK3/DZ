@@ -8,7 +8,9 @@ import kotlin.math.sqrt
 class RandomLognormalValue {
     companion object {
         fun randomLognormalValue(mean: Double, variance: Double): Double {
-            val a: Double = Random().nextGaussian() * sqrt(variance) + mean
+            val a: Double = Random().nextGaussian() * sqrt(variance) + mean // kurtosis and
+            // skewness differ
+
             return exp(a)
         }
 
