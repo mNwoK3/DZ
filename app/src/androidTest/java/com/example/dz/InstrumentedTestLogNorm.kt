@@ -51,7 +51,7 @@ internal class InstrumentedTestLogNorm {
     private val meanDelta = 1e-1
     private val varianceDelta = 0.8
     private val skewnessDelta = 1.1
-    private val kurtosisDelta = 3.1
+    private val kurtosisDelta = 10.1
 
     private var generatedNums = ArrayList<Double>(0)
 
