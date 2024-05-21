@@ -11,6 +11,5 @@ class RandomLognormalValue {
             val a: Double = Random().nextGaussian() * sqrt(variance) + mean // Андрей Спирихин Кринж
             return exp(a)
         }
-
     }
 }
